@@ -5,19 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.john.volleysimple.MainActivity">
+    tools:context="com.example.john.volleysimple.MainActivity"
+    android:padding="20dp">
 
     <EditText
         android:id="@+id/card_num"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="40dp"
+        android:layout_marginBottom="20dp"
         android:contentDescription="Numer karty"
         android:hint="Wpisz tutaj numer karty"
         android:ems="10"
         android:gravity="center"
         android:inputType="number"
         android:maxLength="8" />
+
+    <CheckBox
+        android:id="@+id/showHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:checked="true"
+        android:text="Pokaż ostatnie transakcje" />
 
     <Button
         android:id="@+id/get_pts"
@@ -27,8 +36,17 @@
         android:layout_marginBottom="20dp"
         android:text="Sprawdź"
         android:textAlignment="center"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:enabled="false"/>
 
+
+    <TextView
+        android:id="@+id/lblPts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/txt"
+        android:text="Liczba punktów:"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/txt"
@@ -36,9 +54,8 @@
         android:layout_height="wrap_content"
         android:lineSpacingExtra="8sp"
         android:maxLines="3"
-        android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp" />
+        android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/img"
@@ -47,5 +64,21 @@
         android:layout_gravity="center"
         app:srcCompat="@android:color/background_light" />
 
+    <TextView
+        android:id="@+id/lblHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/txtHistory"
+        android:text="Ostatnie transakcje:"
+        android:visibility="invisible"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/txtHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark" />
 
 </LinearLayout>
