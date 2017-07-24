@@ -55,7 +55,8 @@
         android:lineSpacingExtra="8sp"
         android:maxLines="3"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"/>
 
     <ImageView
         android:id="@+id/img"
